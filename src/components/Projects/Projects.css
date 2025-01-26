@@ -1,0 +1,103 @@
+#project{
+    width: 100%;
+    position: relative;
+}
+
+.project-box{
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-box img{
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.project-box .p-overlayer{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background: rgba(22, 32, 82, 0.5);
+    background: linear-gradient(180deg, rgba(22, 32, 82, 0) 65%, rgba(22, 32, 82, 0.85) 100%);
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.project-box .p-overlayer strong{
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    border-left: 4px solid #689af8;
+    line-height: 30px;
+    padding-left: 20px;
+    font-weight: 700;
+}
+.project-box:hover .p-overlayer{
+    top: 0px;
+    }
+
+
+.github-btn{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Swiper{
+    position: static !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    top: 10% !important;
+}
+
+.swiper-button-prev{
+    right: 35px !important;
+    left: auto !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 30px !important;
+    color: var(--whiteColor);
+}
+
+.swiper-pagination{
+    bottom: 30px !important;
+}
+
+@media (max-width: 560px){
+    
+    .project-heaading h3{
+        font-size: 1.7rem;
+    }
+
+    .project-box img {
+        height: 200px; 
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev{
+        top: 5.5% !important;
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-box img {
+        height: 250px; 
+    }
+}

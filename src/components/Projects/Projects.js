@@ -73,8 +73,8 @@ const Projects = () => {
       </Swiper>
 
       <div className="github-btn">
-        <a href="https://gitlab.com/Mspanchal23" className="btn-link">
-          My Git <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/Mspanchal23" className="btn-link">
+          My GitHub <i class="fa-brands fa-github"></i>
         </a>
       </div>
     </section>

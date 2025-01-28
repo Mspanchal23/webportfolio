@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --bgColor: #162052;
-    --whiteColor: #fff;
-    --grayColor: #bbb;
-    --blueColor: #689af8;
+    --bgColor: #3a6760;
+    --whiteColor: #12211f;
+    --grayColor: #b8d7cf;
+    --blueColor: #2b4440;
 }
 
 /* :root{
@@ -51,7 +51,7 @@ a{
     font-weight: 400;
     letter-spacing: 5px;
     font-size: 0.8rem;
-    border-bottom: 1px solid #689af8;
+    border-bottom: 1px solid #dcebe7;
     padding: 10px 10px 10px 0;
     transition: all 0.5s cubic-bezier(0.075,0.82,0.165,1);
     cursor: pointer;
@@ -59,7 +59,7 @@ a{
 
 .btn-link:hover{
     padding: 10px;
-    background: rgba(104, 154, 248, 0.102);
+    background: #8fbcb2;
 }
 
 section{

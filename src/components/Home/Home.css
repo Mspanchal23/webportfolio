@@ -42,7 +42,7 @@
     justify-content: center;
     align-items: center;
     opacity: 0.8;
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--whiteColor);
     position: relative;
 }
 
@@ -50,7 +50,7 @@
     content: '';
     position: absolute;
     inset: -10px 140px;
-    background: linear-gradient(315deg, #347599, #25555a);
+    background: linear-gradient(315deg, #01664d, #77827f);
     transition: 0.05s;
     animation: animate 4s linear infinite;
 }
@@ -72,7 +72,7 @@
     content: '';
     position: absolute;
     inset: 6px;
-    background: rgb(70, 78, 119);
+    background: #2b4440;
     border-radius: 50%;
     z-index: 1;
 }
@@ -80,7 +80,7 @@
 .img-box{
     position: absolute;
     inset: -1px;
-    border: 6px solid rgba(48, 72, 192, 0.411);
+    border: 6px solid rgba(55, 81, 78, 0.411);
     z-index: 3;
     border-radius: 50%;
     overflow: hidden;
@@ -110,7 +110,7 @@
 
 .img-box h2{
     position: relative;
-    color: #fff;
+    color: var(--grayColor);
     font-size: 1.4rem;
     text-align: center;
     font-weight: 600;
@@ -124,22 +124,22 @@
 }
 
 .img-box .social a{
-    color: #fff;
+    color: #dcebe7;
     font-size: 1.5rem;
     margin: 0 7rem;
     transition: 0.3s;
 }
 
 .img-box .social a:hover{
-    text-shadow: 0 0 10px #fff;
+    text-shadow: 0 0 10px var(--grayColor);
 }
 
 .img-box .hire-me{
     position: relative;
     margin-top: 10px;
     padding: 6px 20px;
-    background: #fff;
-    color: #000;
+    background: #dcebe7;
+    color: #12211f;
     border-radius: 25px;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -149,7 +149,7 @@
 
 .img-box .hire-me:hover{
     letter-spacing: 0.2rem;
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #f4f9f8;
 }
 
 @media (max-width:865px){

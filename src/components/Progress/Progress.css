@@ -2,7 +2,7 @@
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background: rgb(254, 254, 254);
+    background: rgb(213, 244, 233);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,11 +17,11 @@
 #progress div{
     width: calc(100% - 5px);
     height: calc(100% - 5px);
-    background: #6167e2;
+    background: #12211f;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #f4f9f8;
 
 }

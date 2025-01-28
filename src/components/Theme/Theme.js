@@ -6,11 +6,11 @@ const Theme = () => {
 
     useEffect(() => {
         if (dark) {
-            document.documentElement.style.setProperty('--bgColor', '#162052');
-            document.documentElement.style.setProperty('--whiteColor', '#fff');            
+            document.documentElement.style.setProperty('--bgColor', '#3a6760');
+            document.documentElement.style.setProperty('--whiteColor', '#12211f');            
         } else {
-            document.documentElement.style.setProperty('--bgColor', '#fff');
-            document.documentElement.style.setProperty('--whiteColor', '#111');
+            document.documentElement.style.setProperty('--bgColor', '#12211f');
+            document.documentElement.style.setProperty('--whiteColor', '#b8d7cf');
         }
     },[dark]);
 

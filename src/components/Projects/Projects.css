@@ -28,17 +28,17 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    background: rgba(22, 32, 82, 0.5);
-    background: linear-gradient(180deg, rgba(22, 32, 82, 0) 65%, rgba(22, 32, 82, 0.85) 100%);
+    background: rgba(23, 88, 77, 0.5);
+    background: linear-gradient(180deg, rgba(95, 157, 140, 0) 65%, #44d0b6d9 100%);
     padding: 30px;
     transition: 0.3s;
 }
 
 .project-box .p-overlayer strong{
-    color: white;
+    color: #f4f9f8;
     font-size: 2rem;
     letter-spacing: 2px;
-    border-left: 4px solid #689af8;
+    border-left: 4px solid #12211f;
     line-height: 30px;
     padding-left: 20px;
     font-weight: 700;

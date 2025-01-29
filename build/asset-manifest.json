@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/manthan/static/css/main.734d299d.css",
+    "main.js": "/manthan/static/js/main.5ce8beb3.js",
+    "static/media/ms1.jpg": "/manthan/static/media/ms1.fcfd404d4d4ce6e00e5c.jpg",
+    "static/media/code4.png": "/manthan/static/media/code4.016f6eab68ef58aabfe0.png",
+    "static/media/cv.pdf": "/manthan/static/media/cv.af0545fc2e3ae0462636.pdf",
+    "static/media/code2.png": "/manthan/static/media/code2.495699db09b637657ab5.png",
+    "static/media/code3.png": "/manthan/static/media/code3.4643a25763f14c55430a.png",
+    "static/media/code1.png": "/manthan/static/media/code1.86e660fc568292dc9556.png",
+    "index.html": "/manthan/index.html",
+    "main.734d299d.css.map": "/manthan/static/css/main.734d299d.css.map",
+    "main.5ce8beb3.js.map": "/manthan/static/js/main.5ce8beb3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.734d299d.css",
+    "static/js/main.5ce8beb3.js"
+  ]
+}

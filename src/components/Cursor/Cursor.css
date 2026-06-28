@@ -1,0 +1,51 @@
+@property --scale {
+    syntax: '<number>';
+    initial-value: 1;
+    inherits: false;
+}
+
+.cursor-dot,
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    will-change: transform;
+}
+
+body.cursor-on .cursor-dot,
+body.cursor-on .cursor-ring { opacity: 1; }
+
+/* exact dot */
+.cursor-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+    transform: translate(var(--x, -100px), var(--y, -100px)) translate(-50%, -50%);
+}
+
+/* trailing ring */
+.cursor-ring {
+    width: 36px;
+    height: 36px;
+    border: 1.6px solid var(--accent);
+    background: transparent;
+    transform: translate(var(--x, -100px), var(--y, -100px)) translate(-50%, -50%) scale(var(--scale, 1));
+    transition: --scale 0.25s ease, background 0.25s ease, border-color 0.25s ease, opacity 0.3s ease;
+}
+.cursor-ring.hovering {
+    --scale: 1.8;
+    background: var(--accent-soft);
+    border-color: var(--accent-2);
+}
+.cursor-ring.clicking { --scale: 0.7; }
+
+/* Hide the follower if the device can't hover */
+@media (hover: none), (pointer: coarse) {
+    .cursor-dot, .cursor-ring { display: none; }
+}

@@ -1,27 +1,60 @@
-#contact{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.contact-card {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 44px;
     align-items: center;
-    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    padding: 48px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 360px;
+    height: 360px;
+    background: var(--accent-grad);
+    filter: blur(120px);
+    opacity: 0.18;
+    pointer-events: none;
 }
 
-#contact strong{
-    color: var(--blueColor);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 700;
-}
+.contact-left .section-title { font-size: clamp(1.7rem, 3.5vw, 2.3rem); }
+.contact-left .section-subtitle { margin-bottom: 28px; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
-#contact h3{
-    font-size: 2.35rem;
-    letter-spacing: 1px;
+.contact-right { display: grid; gap: 12px; }
+.contact-channel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
+.contact-channel:hover { transform: translateX(5px); border-color: var(--accent); }
+.cc-icon {
+    flex-shrink: 0;
+    width: 44px; height: 44px;
+    display: grid; place-items: center;
+    border-radius: 11px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+.cc-text { display: flex; flex-direction: column; min-width: 0; }
+.cc-text small { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-mute); }
+.cc-text strong { font-size: 0.95rem; font-weight: 600; color: var(--text); overflow: hidden; text-overflow: ellipsis; }
+.cc-arrow { margin-left: auto; color: var(--text-mute); transition: transform 0.25s ease, color 0.25s ease; }
+.contact-channel:hover .cc-arrow { color: var(--accent); transform: translateX(4px); }
 
-#contact p{
-    color: var(--grayColor);
-    max-width: 700px;
-    margin: 15px 0;
-    letter-spacing: 1px;
+@media (max-width: 860px) {
+    .contact-card { grid-template-columns: 1fr; padding: 34px 24px; gap: 32px; }
 }

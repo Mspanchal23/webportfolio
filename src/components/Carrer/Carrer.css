@@ -1,84 +1,108 @@
-.carrer-education{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+.career-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
 }
 
-.carrer-education::before{
+.col-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 26px;
+    color: var(--text);
+}
+.col-title i { color: var(--accent); }
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 28px;
+}
+.timeline::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-    width: 1px;
-    background: var(--grayColor);
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(var(--accent), transparent);
+    opacity: 0.5;
+}
+.tl-item { position: relative; margin-bottom: 22px; }
+.tl-item:last-child { margin-bottom: 0; }
+.tl-dot {
+    position: absolute;
+    left: -28px;
+    top: 22px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
-.carrer h3{
-    font-size: 3.1rem;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
+.tl-card { padding: 20px 22px; }
+.tl-card:hover { transform: translateX(4px); border-color: var(--border-strong); }
 
-.c-box{
+.tl-top {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 6px;
 }
+.tl-top h4 { font-size: 1.08rem; font-weight: 600; }
 
-.c-box h4{
-    font-size: 1.3rem;
+.now-badge, .score-badge {
+    flex-shrink: 0;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-left: 3px solid var(--blueColor);
-    line-height: 1.3rem;
-    padding-left: 10px;
+    padding: 4px 11px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--border);
 }
 
-.c-box strong{
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding-left: 10px;
-    margin-top: 5px;
+.tl-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-bottom: 12px;
+}
+.tl-meta .company { font-weight: 600; color: var(--accent); font-size: 0.92rem; }
+.tl-meta .company-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s ease;
+}
+.tl-meta .company-link i { font-size: 0.72rem; opacity: 0.8; transition: transform 0.2s ease; }
+.tl-meta .company-link:hover { text-decoration: underline; }
+.tl-meta .company-link:hover i { transform: translate(2px, -2px); }
+.tl-meta .period { font-size: 0.85rem; color: var(--text-mute); }
+
+.tl-card ul { display: grid; gap: 7px; }
+.tl-card ul li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+.tl-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 9px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
 }
 
-.c-box span{
-    color: var(--grayColor);
-    font-size: 1rem;
-    letter-spacing: 2px;
-    padding-left: 10px;
-    margin-top: 6px;
-}
+.resume-btn { margin-top: 28px; }
 
-.btn-c{
-    text-align: center;
-    margin-top: 50px;
-}
-
-@media (max-width:600px){
-    .carrer-education{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .carrer-education::before{
-        display: none;
-    }
-
-    .carrer{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .edu{
-        margin-top: 50px;
-    }
+@media (max-width: 860px) {
+    .career-grid { grid-template-columns: 1fr; gap: 44px; }
 }
